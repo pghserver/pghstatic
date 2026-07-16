@@ -37,8 +37,8 @@ public class PghStatic implements PghPlugin {
             if (req.method() != RequestMethod.GET) {
                 res.status(ResponseStatus.METHOD_NOT_ALLOWED);
                 next.run();
-            } else if (!req.url().path.contains("..") && !req.url().path.contains("\\")) {
-                Path file = staticDirectory.resolve(req.url().path.substring(1));
+            } else if (!req.url().path().contains("..") && !req.url().path().contains("\\")) {
+                Path file = staticDirectory.resolve(req.url().path().substring(1));
                 if (!Files.exists(file)) {
                     res.status(ResponseStatus.NOT_FOUND);
                     next.run();
