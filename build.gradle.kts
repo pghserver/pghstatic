@@ -10,5 +10,5 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.pghserver:pghserver-api:8")
+    compileOnly("com.pghserver:pghserver-api:9")
 }
