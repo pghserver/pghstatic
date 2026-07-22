@@ -1,4 +1,4 @@
 main-class=com.pghserver.pghstatic.PghStatic
 name=PghStatic
-version=1
+version=4
 pgh=9

@@ -73,6 +73,8 @@ public class PghStatic implements PghPlugin {
                 }
 
                 res.body(data);
+                res.header("Access-Control-Allow-Origin", "*");
+                res.header("Access-Control-Allow-Methods", "GET");
             } else {
                 res.status(ResponseStatus.BAD_REQUEST);
                 next.run();
